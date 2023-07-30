@@ -50,6 +50,29 @@
                 "CARGO_TERM_COLOR": "always",
                 "CARGO_TERM_PROGRESS_WHEN": "always"
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "002_buffer_copying",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=002_buffer_copying",
+                    "--package=vulkan_engine"
+                ],
+                "filter": {
+                    "name": "002_buffer_copying",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "debug",
+                "CARGO_TERM_COLOR": "always",
+                "CARGO_TERM_PROGRESS_WHEN": "always"
+            }
         }
     ]
 }
