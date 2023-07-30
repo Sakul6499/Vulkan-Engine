@@ -11,3 +11,4 @@ crate-type = ["cdylib", "staticlib", "rlib"]
 [dependencies]
 log = "0.4"
 env_logger = "0.9"
+vulkano = "0.33"
