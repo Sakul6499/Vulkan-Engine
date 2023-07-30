@@ -1,15 +1,17 @@
 use std::sync::Arc;
 
 use vulkano::{
-    command_buffer::PrimaryAutoCommandBuffer, instance::Instance,
+    command_buffer::{allocator::CommandBufferAllocator, PrimaryAutoCommandBuffer},
+    instance::Instance,
 };
 
 use crate::LogicalDevice;
 
-pub trait AbstractEngine {
+pub trait AbstractEngine<T: CommandBufferAllocator> {
     /// Kills the engine as a safety measure in case other things like winit aren't killing the Engine part.
     fn kill(&self) {
-        log::debug!("::: KILLING MAIN PROCESS :::");
+        log::debug!(":::  KILLING MAIN PROCESS  :::");
+        log::debug!("::: CARGO MAY REPORT ERROR :::");
         std::process::exit(std::process::id().try_into().unwrap());
     }
 
@@ -27,4 +29,7 @@ pub trait AbstractEngine {
 
     /// Returns the logical device.
     fn get_logical_device(&self) -> Arc<LogicalDevice>;
+
+    /// Returns the command buffer allocator
+    fn get_command_buffer_allocator(&self) -> Arc<T>;
 }
