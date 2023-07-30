@@ -5,6 +5,4 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Sakul6499/Vulkan-Engine"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
