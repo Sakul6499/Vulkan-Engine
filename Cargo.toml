@@ -9,3 +9,5 @@ repository = "https://github.com/Sakul6499/Vulkan-Engine"
 crate-type = ["cdylib", "staticlib", "rlib"]
 
 [dependencies]
+log = "0.4"
+env_logger = "0.9"
