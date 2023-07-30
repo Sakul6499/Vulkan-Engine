@@ -6,7 +6,7 @@ use vulkano::{
 
 use crate::LogicalDevice;
 
-pub trait BaseEngine {
+pub trait AbstractEngine {
     /// Kills the engine as a safety measure in case other things like winit aren't killing the Engine part.
     fn kill(&self) {
         log::debug!("::: KILLING MAIN PROCESS :::");
