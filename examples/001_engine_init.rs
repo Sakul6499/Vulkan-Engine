@@ -1,21 +1,28 @@
-// use vulkan_engine::{BaseEngine, ComputeEngine};
-// use vulkano::command_buffer::{AutoCommandBufferBuilder, CommandBufferUsage};
+use vulkan_engine::{AbstractEngine, ComputeEngine};
+use vulkano::command_buffer::{AutoCommandBufferBuilder, CommandBufferUsage};
 
-// pub fn main() {
-//     let compute_engine = ComputeEngine::new();
+pub fn main() {
+    env_logger::init();
+    log::info!(
+        "Logger initialized at max level set to {}",
+        log::max_level()
+    );
+    log::info!("001 - Engine Init");
 
-//     ComputeEngine::print_api_information(compute_engine.get_instance(), log::Level::Info);
+    let compute_engine = ComputeEngine::new();
 
-//     compute_engine.compute(&|engine: &ComputeEngine| {
-//         AutoCommandBufferBuilder::primary(
-//             engine.get_logical_device().get_device(),
-//             engine.get_logical_device().get_queue_family_index(),
-//             CommandBufferUsage::OneTimeSubmit,
-//         )
-//         .unwrap()
-//         .build()
-//         .unwrap()
-//     });
+    ComputeEngine::print_api_information(compute_engine.get_instance(), log::Level::Info);
 
-//     compute_engine.kill();
-// }
+    compute_engine.compute(&|engine: &ComputeEngine| {
+        AutoCommandBufferBuilder::primary(
+            &engine.get_command_buffer_allocator(),
+            engine.get_logical_device().get_queue_family_index(),
+            CommandBufferUsage::OneTimeSubmit,
+        )
+        .unwrap()
+        .build()
+        .unwrap()
+    });
+
+    compute_engine.kill();
+}
