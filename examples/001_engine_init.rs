@@ -23,6 +23,4 @@ pub fn main() {
         .build()
         .unwrap()
     });
-
-    compute_engine.kill();
 }
