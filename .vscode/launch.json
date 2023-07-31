@@ -142,6 +142,29 @@
                 "CARGO_TERM_COLOR": "always",
                 "CARGO_TERM_PROGRESS_WHEN": "always"
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "006_mandelbrot_image",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=006_mandelbrot_image",
+                    "--package=vulkan_engine"
+                ],
+                "filter": {
+                    "name": "006_mandelbrot_image",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "debug",
+                "CARGO_TERM_COLOR": "always",
+                "CARGO_TERM_PROGRESS_WHEN": "always"
+            }
         }
     ]
 }
