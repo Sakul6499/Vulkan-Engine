@@ -11,7 +11,9 @@ crate-type = ["cdylib", "staticlib", "rlib"]
 [dependencies]
 log = "0.4"
 vulkano = "0.33"
+bytemuck = "1.13"
 
 [dev-dependencies]
 env_logger = "0.10"
 vulkano-shaders = "0.33"
+image = "0.24"
