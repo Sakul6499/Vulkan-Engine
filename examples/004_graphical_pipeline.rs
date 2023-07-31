@@ -9,7 +9,6 @@ use vulkano::{
         AutoCommandBufferBuilder, CommandBufferUsage, CopyImageToBufferInfo, RenderPassBeginInfo,
         SubpassContents,
     },
-    descriptor_set::allocator::StandardDescriptorSetAllocator,
     format::Format,
     image::{view::ImageView, ImageDimensions, StorageImage},
     memory::allocator::{AllocationCreateInfo, MemoryUsage, StandardMemoryAllocator},
@@ -222,7 +221,7 @@ pub fn main() {
 
     let buffer_content = output_buffer.read().unwrap();
     let image = ImageBuffer::<Rgba<u8>, _>::from_raw(1024, 1024, &buffer_content[..]).unwrap();
-    image.save("triangle.png").unwrap();
+    image.save("004_graphical_pipeline.png").unwrap();
 
     #[cfg(debug_assertions)]
     let end = Instant::now();
