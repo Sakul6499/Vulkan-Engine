@@ -27,7 +27,7 @@ pub fn main() {
     // Print information
     ComputeEngine::print_api_information(compute_engine.get_instance(), log::Level::Info);
 
-    // Make Memory Allocator
+    // Make Memory and DescriptorSet Allocator
     let memory_allocator =
         StandardMemoryAllocator::new_default(compute_engine.get_logical_device().get_device());
     let descriptor_set_allocator =
