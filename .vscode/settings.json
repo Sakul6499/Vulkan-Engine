@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "bytemuck",
+        "framebuffer",
+        "Framebuffer",
+        "renderpass",
+        "repr",
+        "SFLOAT",
+        "vulkan",
+        "vulkano",
+        "Zeroable"
+    ]
+}
