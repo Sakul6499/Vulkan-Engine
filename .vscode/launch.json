@@ -73,6 +73,29 @@
                 "CARGO_TERM_COLOR": "always",
                 "CARGO_TERM_PROGRESS_WHEN": "always"
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "003_computing",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=003_computing",
+                    "--package=vulkan_engine"
+                ],
+                "filter": {
+                    "name": "003_computing",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "debug",
+                "CARGO_TERM_COLOR": "always",
+                "CARGO_TERM_PROGRESS_WHEN": "always"
+            }
         }
     ]
 }

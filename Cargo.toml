@@ -14,3 +14,4 @@ vulkano = "0.33"
 
 [dev-dependencies]
 env_logger = "0.10"
+vulkano-shaders = "0.33"
