@@ -38,7 +38,7 @@ pub fn main() {
         "Logger initialized at max level set to {}",
         log::max_level()
     );
-    log::info!("004 - Graphical Pipeline");
+    log::info!("005 - Graphical Pipeline");
 
     // Prepare Engine
     let compute_engine = ComputeEngine::new();
