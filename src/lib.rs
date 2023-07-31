@@ -6,3 +6,6 @@ pub use abstract_engine::*;
 
 mod compute_engine;
 pub use compute_engine::*;
+
+mod s_vertex;
+pub use s_vertex::*;
