@@ -25,11 +25,11 @@ use vulkano::{
 };
 
 mod shader_vertex {
-    vulkano_shaders::shader! {ty: "vertex", path: "shaders/004_graphical_pipeline.vert"}
+    vulkano_shaders::shader! {ty: "vertex", path: "shaders/005_graphical_pipeline.vert"}
 }
 
 mod shader_fragment {
-    vulkano_shaders::shader! {ty: "fragment", path: "shaders/004_graphical_pipeline.frag"}
+    vulkano_shaders::shader! {ty: "fragment", path: "shaders/005_graphical_pipeline.frag"}
 }
 
 pub fn main() {
@@ -221,7 +221,7 @@ pub fn main() {
 
     let buffer_content = output_buffer.read().unwrap();
     let image = ImageBuffer::<Rgba<u8>, _>::from_raw(1024, 1024, &buffer_content[..]).unwrap();
-    image.save("004_graphical_pipeline.png").unwrap();
+    image.save("005_graphical_pipeline.png").unwrap();
 
     #[cfg(debug_assertions)]
     let end = Instant::now();
