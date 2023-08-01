@@ -331,6 +331,7 @@ pub fn main() {
                     }
                 }
             }
+            Event::RedrawRequested(_) => {}
             Event::MainEventsCleared => {}
             _ => (),
         }
