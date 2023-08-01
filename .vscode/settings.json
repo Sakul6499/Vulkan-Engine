@@ -9,6 +9,7 @@
         "swapchain",
         "vulkan",
         "vulkano",
+        "winit",
         "Zeroable"
     ]
 }
