@@ -11,6 +11,7 @@ crate-type = ["cdylib", "staticlib", "rlib"]
 [dependencies]
 log = "0.4"
 vulkano = "0.33"
+vulkano-win = "0.33"
 bytemuck = "1.13"
 
 [dev-dependencies]

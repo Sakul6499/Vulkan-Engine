@@ -6,6 +6,7 @@
         "renderpass",
         "repr",
         "SFLOAT",
+        "swapchain",
         "vulkan",
         "vulkano",
         "Zeroable"
