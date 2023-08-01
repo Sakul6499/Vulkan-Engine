@@ -165,6 +165,29 @@
                 "CARGO_TERM_COLOR": "always",
                 "CARGO_TERM_PROGRESS_WHEN": "always"
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "007_basic_triangle",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=007_basic_triangle",
+                    "--package=vulkan_engine"
+                ],
+                "filter": {
+                    "name": "007_basic_triangle",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "debug",
+                "CARGO_TERM_COLOR": "always",
+                "CARGO_TERM_PROGRESS_WHEN": "always"
+            }
         }
     ]
 }

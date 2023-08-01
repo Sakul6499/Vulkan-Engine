@@ -6,6 +6,7 @@
         "renderpass",
         "repr",
         "SFLOAT",
+        "Subbuffer",
         "swapchain",
         "vulkan",
         "vulkano",
